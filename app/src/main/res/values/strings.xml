@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">GoalBox soccer prediction</string>
+    <string name="let_s_assume_that_you_are_serious_player_and_you_want_to_confirm_your_analysis_before_place_your_bet_follow_instructions_below">As serious bettor, you want to confirm your soccer match analysis. Find on the web past match statistics of both teams and follow instructions below. </string>
+    <string name="home_team_sum_conceed_scored_goals_of_the_home_team_in_the_last_10_matches_played_enter_that_sum_of_goals_on_the_slider">HOME TEAM: Sum conceed + scored goals of the home team in the last 10 matches played. Enter that sum of goals on the slider.</string>
+    <string name="away_team_sum_conceed_scored_goals_of_the_away_team_in_the_last_10_matches_played_enter_that_sum_of_goals_on_the_slider">AWAY TEAM: Sum conceed + scored goals of the away team in the last 10 matches played. Enter that sum of goals on the slider.</string>
+    <string name="home_team">HOME TEAM LAST 10 MATCHES</string>
+    <string name="away_team_last_10_matches">AWAY TEAM LAST 10 MATCHES</string>
+    <string name="estimated_result">EXPECTED GOALS</string>
+    <string name="goals">GOALS</string>
+    <string name="calculate_expected_goals">RE-CALCULATE EXPECTED GOALS</string>
+    <string name="win_rate">WIN RATE</string>
+    <string name="over">OVER</string>
+</resources>

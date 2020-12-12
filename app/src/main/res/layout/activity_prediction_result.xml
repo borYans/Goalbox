@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.85"
+    android:background="@color/backgroundColor"
+    android:padding="30dp"
+    tools:context="com.boko.goalboxsoccerprediction.PredictionResultActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/estimatedResultTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="center"
+            android:text="@string/estimated_result"
+            android:textColor="@color/titleTxt_color"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/instructionsLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/estimatedResultTxt"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/layouts_background"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/overUnderTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/over"
+                android:textColor="@color/custom_thumb_seekbar_color"
+                android:textSize="43sp" />
+
+            <TextView
+                android:id="@+id/numberOfGoalsTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:textColor="@color/titleTxt_color"
+                android:textSize="130sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/goals"
+                android:textColor="@color/titleTxt_color"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="with"
+                android:textColor="@color/instructionsTxt_color"
+                android:textSize="21sp" />
+
+
+            <TextView
+                android:id="@+id/percentageTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:textColor="@color/titleTxt_color"
+                android:textSize="80sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/accuracyTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/win_rate"
+                android:textColor="@color/titleTxt_color"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/reCalculateResultBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/instructionsLinear"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/custom_thumb_seekbar_color"
+            android:padding="15dp"
+            android:text="@string/calculate_expected_goals"
+            android:textColor="@color/titleTxt_color"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

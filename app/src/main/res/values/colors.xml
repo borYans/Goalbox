@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#323443</color>
+    <color name="colorAccent">#ffffffff</color>
+    <color name="backgroundColor">#000000</color>
+    <color name="itemBackgroundColor">#323443</color>
+    <color name="titleTxt_color">#ffffff</color>
+    <color name="instructionsTxt_color">#B1ABAB</color>
+    <color name="custom_thumb_seekbar_color">#E61A67</color>
+    <color name="calculateButtonColor">#27B251</color>
+
+</resources>

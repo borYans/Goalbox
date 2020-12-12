@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.85"
+    android:background="@color/backgroundColor"
+    android:padding="30dp"
+    tools:context="com.boko.goalboxsoccerprediction.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/instructionsLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layouts_background"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/instructionsText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="HOW TO USE THIS TOOL"
+                android:textStyle="bold"
+                android:textColor="@color/titleTxt_color"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/instructionsText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/let_s_assume_that_you_are_serious_player_and_you_want_to_confirm_your_analysis_before_place_your_bet_follow_instructions_below"
+                android:textColor="@color/instructionsTxt_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/instructionsText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/home_team_sum_conceed_scored_goals_of_the_home_team_in_the_last_10_matches_played_enter_that_sum_of_goals_on_the_slider"
+                android:textColor="@color/instructionsTxt_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/instructionsText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/away_team_sum_conceed_scored_goals_of_the_away_team_in_the_last_10_matches_played_enter_that_sum_of_goals_on_the_slider"
+                android:textColor="@color/instructionsTxt_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/homeTeamLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/instructionsLinear"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/layouts_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/homeTeamTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/home_team"
+                android:textColor="@color/titleTxt_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <TextView
+                    android:id="@+id/homeTeamGoalsTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/titleTxt_color"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toEndOf="@id/homeTeamGoalsTxt"
+                    android:layout_toRightOf="@id/homeTeamGoalsTxt"
+                    android:text="goals"
+                    android:textColor="@color/titleTxt_color"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/homeTeamGoalsTxt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/homeSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:max="50"
+                android:thumb="@drawable/custom_thumb" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/awayTeamLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homeTeamLinear"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/layouts_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/awayTeamTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="@string/away_team_last_10_matches"
+                android:textColor="@color/titleTxt_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <TextView
+                    android:id="@+id/awayTeamGoalsTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/titleTxt_color"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toEndOf="@id/awayTeamGoalsTxt"
+                    android:layout_toRightOf="@id/awayTeamGoalsTxt"
+                    android:text="goals"
+                    android:textColor="@color/titleTxt_color"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/awayTeamGoalsTxt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/awaySeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:max="50"
+
+                android:thumb="@drawable/custom_thumb" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/calculateResultBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/awayTeamLinear"
+            android:layout_marginTop="10sp"
+            android:backgroundTint="@color/calculateButtonColor"
+            android:padding="15dp"
+            android:text="CALCULATE EXPECTED GOALS"
+            android:textColor="@color/titleTxt_color"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
